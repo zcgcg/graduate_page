@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== 全局样式 ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans SC', sans-serif;
+  background: #fff5f7;
+  color: #5d2e46;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fce4ec;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f8bbd0, #e8a0bf);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f48fb1;
+}
+
+/* ===== 梦幻渐变背景 ===== */
+.dream-gradient {
+  background: linear-gradient(
+    135deg,
+    #fff5f7 0%,
+    #fce4ec 25%,
+    #fff0f5 50%,
+    #fce4ec 75%,
+    #fff5f7 100%
+  );
+}
+
+.dream-glow {
+  box-shadow: 0 0 20px rgba(232, 160, 191, 0.3),
+              0 0 40px rgba(232, 160, 191, 0.1);
+}
+
+.dream-glow-strong {
+  box-shadow: 0 0 30px rgba(232, 160, 191, 0.4),
+              0 0 60px rgba(232, 160, 191, 0.2),
+              0 0 90px rgba(232, 160, 191, 0.1);
+}
+
+/* ===== 金色光晕 ===== */
+.gold-glow {
+  box-shadow: 0 0 15px rgba(240, 208, 96, 0.4),
+              0 0 30px rgba(240, 208, 96, 0.2);
+}
+
+/* ===== 虚化图片效果 ===== */
+.blurred-image {
+  filter: blur(8px);
+  transition: filter 0.5s ease;
+}
+
+.blurred-image:hover {
+  filter: blur(4px);
+}
+
+/* ===== 竖排文字 ===== */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 0.3em;
+}
+
+/* ===== 时光轴线 ===== */
+.timeline-axis {
+  background: linear-gradient(
+    180deg,
+    #f0d060,
+    #f7e898 30%,
+    #f0d060 50%,
+    #f7e898 70%,
+    #f0d060 100%
+  );
+  width: 3px;
+  border-radius: 2px;
+}
+
+/* ===== 卡片入场动画 ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* ===== 星星闪烁 ===== */
+@keyframes starPulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* 层叠动画延迟 */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
